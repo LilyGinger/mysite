@@ -1,0 +1,10 @@
+baseURL = "https://yourname.com/"
+languageCode = "zh-cn"
+title = "你的名字"
+theme = "PaperMod"
+
+[params]
+  [params.profileMode]
+    enabled = true
+    title = "你的名字"
+    subtitle = "写代码 / 写文章 / 音乐"
