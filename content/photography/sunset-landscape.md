@@ -3,7 +3,7 @@ title: "日落风景"
 date: 2026-01-28
 description: "记录一个宁静的黄昏时刻"
 cover:
-  image: "/images/photography/sample-photo.svg"
+  image: "/images/photography/pic1.jpg"
   caption: "日落时分的风景"
 ---
 

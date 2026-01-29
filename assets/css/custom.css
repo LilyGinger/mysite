@@ -1,7 +1,7 @@
 /* 首页容器样式 */
 .home-container {
   min-height: 100vh;
-  background-image: url('/images/background.svg');
+  background-image: url('/images/pic2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
