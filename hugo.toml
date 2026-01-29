@@ -5,6 +5,22 @@ theme = "PaperMod"
 
 [params]
   [params.profileMode]
-    enabled = true
-    title = "你的名字"
-    subtitle = "写代码 / 写文章 / 音乐"
+    enabled = false
+
+[menu]
+  [[menu.main]]
+    name = "摄影"
+    url = "/photography/"
+    weight = 1
+  [[menu.main]]
+    name = "音乐"
+    url = "/music/"
+    weight = 2
+  [[menu.main]]
+    name = "随笔"
+    url = "/posts/"
+    weight = 3
+  [[menu.main]]
+    name = "留言"
+    url = "/guestbook/"
+    weight = 4

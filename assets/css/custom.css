@@ -1,0 +1,136 @@
+/* 首页容器样式 */
+.home-container {
+  min-height: 100vh;
+  background-image: url('/images/background.svg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* 网格容器 */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* 网格项目 */
+.grid-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 网格内容 */
+.grid-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 图标样式 */
+.grid-content .icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* 标题样式 */
+.grid-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+/* 描述文字样式 */
+.grid-content p {
+  font-size: 1rem;
+  opacity: 0.9;
+  color: white;
+}
+
+/* 不同板块的渐变背景 */
+.photography {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.6), rgba(255, 204, 92, 0.6));
+}
+
+.music {
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.6), rgba(130, 204, 221, 0.6));
+}
+
+.essays {
+  background: linear-gradient(135deg, rgba(72, 198, 239, 0.6), rgba(111, 231, 219, 0.6));
+}
+
+.guestbook {
+  background: linear-gradient(135deg, rgba(255, 107, 129, 0.6), rgba(255, 175, 189, 0.6));
+}
+
+/* 浮动动画 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .grid-content .icon {
+    font-size: 3rem;
+  }
+  
+  .grid-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .home-container {
+    padding: 1rem;
+  }
+}
+
+/* 调整主题默认样式 */
+.main {
+  padding: 0 !important;
+  max-width: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

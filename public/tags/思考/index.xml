@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>思考 on 你的名字</title>
+    <link>http://localhost:1313/tags/%E6%80%9D%E8%80%83/</link>
+    <description>Recent content in 思考 on 你的名字</description>
+    <generator>Hugo -- 0.154.5</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 25 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E6%80%9D%E8%80%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>关于阅读的一些思考</title>
+      <link>http://localhost:1313/posts/on-reading/</link>
+      <pubDate>Sun, 25 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/on-reading/</guid>
+      <description>&lt;p&gt;最近重新拾起了阅读的习惯，发现在快节奏的生活中，静下心来读一本好书是多么珍贵的体验。&lt;/p&gt;
+&lt;h2 id=&#34;阅读的意义&#34;&gt;阅读的意义&lt;/h2&gt;
+&lt;p&gt;阅读不仅是获取知识的途径，更是一种与自己对话的方式。在文字的世界里，我们可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;体验不同的人生&lt;/li&gt;
+&lt;li&gt;拓宽思维的边界&lt;/li&gt;
+&lt;li&gt;找到内心的共鸣&lt;/li&gt;
+&lt;li&gt;获得前行的力量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;最近在读的书&#34;&gt;最近在读的书&lt;/h2&gt;
+&lt;p&gt;这段时间主要在阅读一些经典文学作品和技术书籍，试图在人文与科技之间找到平衡。每次读完一本书，都会有新的感悟和收获。&lt;/p&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;p&gt;在这个信息爆炸的时代，保持深度阅读的习惯显得尤为重要。希望我们都能在书中找到属于自己的那片天地。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;记于夜深人静时&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
