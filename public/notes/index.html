@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>阅读 | SeainDream</title>
+<title>我的笔记 | SeainDream</title>
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="这是我的私密笔记本，只有我可以看到和编辑。">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/tags/%E9%98%85%E8%AF%BB/">
+<link rel="canonical" href="http://localhost:1313/notes/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.a29c24210eb31d9ce56f669c66a35c9c51b17376b7764e336a49af7dec914cf0.css" integrity="sha256-opwkIQ6zHZzlb2acZqNcnFGxc3a3dk4zakmvfeyRTPA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
@@ -18,8 +18,8 @@
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/tags/%E9%98%85%E8%AF%BB/index.xml" title="rss">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/tags/%E9%98%85%E8%AF%BB/">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/notes/index.xml" title="rss">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/notes/">
 <noscript>
     <style>
         #theme-toggle,
@@ -129,35 +129,174 @@
             </li>
             <li>
                 <a href="http://localhost:1313/notes/" title="笔记">
-                    <span>笔记</span>
+                    <span class="active">笔记</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    阅读
-  </h1>
-</header>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">关于阅读的一些思考
-    </h2>
+<main class="main">
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">我的笔记</h1>
+    <div class="post-description"></div>
   </header>
-  <div class="entry-content">
-    <p>最近重新拾起了阅读的习惯，发现在快节奏的生活中，静下心来读一本好书是多么珍贵的体验。
-阅读的意义 阅读不仅是获取知识的途径，更是一种与自己对话的方式。在文字的世界里，我们可以：
-体验不同的人生 拓宽思维的边界 找到内心的共鸣 获得前行的力量 最近在读的书 这段时间主要在阅读一些经典文学作品和技术书籍，试图在人文与科技之间找到平衡。每次读完一本书，都会有新的感悟和收获。
-小结 在这个信息爆炸的时代，保持深度阅读的习惯显得尤为重要。希望我们都能在书中找到属于自己的那片天地。
-记于夜深人静时
-</p>
+
+  <div class="post-content">
+    <p>这是我的私密笔记本，只有我可以看到和编辑。</p>
+
+    
+    <div id="notes-app">
+      
+      <div id="auth-section" style="margin: 2rem 0;">
+        <div id="auth-status" style="padding: 1rem; background: var(--entry); border-radius: 8px; margin-bottom: 1rem;">
+          <p>请先连接 GitHub 以使用笔记功能</p>
+        </div>
+        <div id="auth-controls">
+          <input type="password" id="github-token" placeholder="输入 GitHub Personal Access Token"
+                 style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--entry); color: var(--content);">
+          <button id="connect-btn" class="notes-btn notes-btn-primary">连接 GitHub</button>
+          <button id="disconnect-btn" class="notes-btn notes-btn-secondary" style="display: none;">断开连接</button>
+        </div>
+        <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--secondary);">
+          <details>
+            <summary style="cursor: pointer;">如何获取 Token？</summary>
+            <ol style="margin-top: 0.5rem;">
+              <li>访问 <a href="https://github.com/settings/tokens/new" target="_blank">GitHub Token 创建页面</a></li>
+              <li>Note填写：My Notes App</li>
+              <li>Expiration 选择：No expiration</li>
+              <li>勾选 <code>gist</code> 权限</li>
+              <li>点击 Generate token并复制</li>
+              <li>粘贴到上方输入框并点击连接</li>
+            </ol>
+          </details>
+        </div>
+      </div>
+
+      
+      <div id="editor-section" style="display: none; margin: 2rem 0;">
+        <h3 id="editor-title">添加新笔记</h3>
+        <div style="margin-bottom: 1rem;">
+          <input type="text" id="note-title" placeholder="标题（可选）"
+                 style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--entry); color: var(--content);">
+          <textarea id="note-content" placeholder="在这里写下你的想法..." rows="6"
+                    style="width: 100%; padding: 0.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--entry); color: var(--content); resize: vertical;"></textarea>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="save-note-btn" class="notes-btn notes-btn-primary">保存笔记</button>
+          <button id="cancel-edit-btn" class="notes-btn notes-btn-secondary" style="display: none;">取消编辑</button>
+        </div>
+      </div>
+
+      
+      <div id="notes-list-section" style="display: none; margin: 2rem 0;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3>我的笔记</h3>
+          <button id="refresh-btn" class="notes-btn notes-btn-secondary">刷新</button>
+        </div>
+        <div id="loading" style="text-align: center; padding: 2rem; display: none;">
+          加载中...
+        </div>
+        <div id="notes-list"></div>
+        <div id="empty-state" style="text-align: center; padding: 2rem; color: var(--secondary); display: none;">
+          还没有笔记，开始记录你的第一条笔记吧！
+        </div>
+      </div>
+    </div>
   </div>
-  <footer class="entry-footer"><span title='2026-01-25 00:00:00 +0000 UTC'>January 25, 2026</span></footer>
-  <a class="entry-link" aria-label="post link to 关于阅读的一些思考" href="http://localhost:1313/posts/on-reading/"></a>
 </article>
+
+<style>
+.notes-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.notes-btn:hover {
+  opacity: 0.8;
+}
+
+.notes-btn-primary {
+  background: var(--theme);
+  color: var(--entry);
+}
+
+.notes-btn-secondary {
+  background: var(--tertiary);
+  color: var(--content);
+}
+
+.note-item {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.note-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.5rem;
+}
+
+.note-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--content);
+  margin: 0;
+}
+
+.note-date {
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.note-content {
+  color: var(--content);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.note-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.note-actions button {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+details summary {
+  color: var(--theme);
+}
+
+details code {
+  background: var(--code-bg);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+</style>
+
+<script src="/js/notes-app.js"></script>
+
     </main>
     
 <footer class="footer">

@@ -1,0 +1,161 @@
+{{ define "main" }}
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div class="post-description">{{ .Description }}</div>
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+    
+    <div id="notes-app">
+      <!-- GitHub认证部分 -->
+      <div id="auth-section" style="margin: 2rem 0;">
+        <div id="auth-status" style="padding: 1rem; background: var(--entry); border-radius: 8px; margin-bottom: 1rem;">
+          <p>请先连接 GitHub 以使用笔记功能</p>
+        </div>
+        <div id="auth-controls">
+          <input type="password" id="github-token" placeholder="输入 GitHub Personal Access Token"
+                 style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--entry); color: var(--content);">
+          <button id="connect-btn" class="notes-btn notes-btn-primary">连接 GitHub</button>
+          <button id="disconnect-btn" class="notes-btn notes-btn-secondary" style="display: none;">断开连接</button>
+        </div>
+        <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--secondary);">
+          <details>
+            <summary style="cursor: pointer;">如何获取 Token？</summary>
+            <ol style="margin-top: 0.5rem;">
+              <li>访问 <a href="https://github.com/settings/tokens/new" target="_blank">GitHub Token 创建页面</a></li>
+              <li>Note填写：My Notes App</li>
+              <li>Expiration 选择：No expiration</li>
+              <li>勾选 <code>gist</code> 权限</li>
+              <li>点击 Generate token并复制</li>
+              <li>粘贴到上方输入框并点击连接</li>
+            </ol>
+          </details>
+        </div>
+      </div>
+
+      <!-- 笔记编辑器 -->
+      <div id="editor-section" style="display: none; margin: 2rem 0;">
+        <h3 id="editor-title">添加新笔记</h3>
+        <div style="margin-bottom: 1rem;">
+          <input type="text" id="note-title" placeholder="标题（可选）"
+                 style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--entry); color: var(--content);">
+          <textarea id="note-content" placeholder="在这里写下你的想法..." rows="6"
+                    style="width: 100%; padding: 0.5rem; border: 1px solid var(--border); border-radius: 4px; background: var(--entry); color: var(--content); resize: vertical;"></textarea>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="save-note-btn" class="notes-btn notes-btn-primary">保存笔记</button>
+          <button id="cancel-edit-btn" class="notes-btn notes-btn-secondary" style="display: none;">取消编辑</button>
+        </div>
+      </div>
+
+      <!-- 笔记列表 -->
+      <div id="notes-list-section" style="display: none; margin: 2rem 0;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3>我的笔记</h3>
+          <button id="refresh-btn" class="notes-btn notes-btn-secondary">刷新</button>
+        </div>
+        <div id="loading" style="text-align: center; padding: 2rem; display: none;">
+          加载中...
+        </div>
+        <div id="notes-list"></div>
+        <div id="empty-state" style="text-align: center; padding: 2rem; color: var(--secondary); display: none;">
+          还没有笔记，开始记录你的第一条笔记吧！
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<style>
+.notes-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.notes-btn:hover {
+  opacity: 0.8;
+}
+
+.notes-btn-primary {
+  background: var(--theme);
+  color: var(--entry);
+}
+
+.notes-btn-secondary {
+  background: var(--tertiary);
+  color: var(--content);
+}
+
+.note-item {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.note-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.5rem;
+}
+
+.note-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--content);
+  margin: 0;
+}
+
+.note-date {
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.note-content {
+  color: var(--content);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.note-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.note-actions button {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+details summary {
+  color: var(--theme);
+}
+
+details code {
+  background: var(--code-bg);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+</style>
+
+<script src="/js/notes-app.js"></script>
+{{ end }}

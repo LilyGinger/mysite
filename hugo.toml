@@ -24,3 +24,7 @@ theme = "PaperMod"
     name = "留言"
     url = "/guestbook/"
     weight = 4
+  [[menu.main]]
+    name = "笔记"
+    url = "/notes/"
+    weight = 5
